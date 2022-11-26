@@ -27,7 +27,7 @@ then
 	sudo systemctl enable docker
 	sudo docker build -t mysql .
 	sleep 30
-	sudo docker run --name PontoSa -p 3306:3306 mysql
+	sudo docker run --name PontoSa -p 3306:3306 -e "MYSQL_ROOT_PASSWORD=temp123" mysql
 	sleep 10
 	
 else
